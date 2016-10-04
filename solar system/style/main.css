@@ -1,0 +1,112 @@
+body{
+  background-color: black;
+  overflow: hidden;
+  color:white;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+h1{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.planet, .orbit, .star{
+  position: absolute;
+  border-radius: 50%;
+}
+
+.orbit, .star{
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.planet{
+  top:0;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+}
+
+.orbit{
+  border:1px solid #444;
+  height: 150px;
+  width: 150px;
+}
+
+#sun{
+  background-image: radial-gradient(orange 20%, yellow);
+  box-shadow: 0 0 25px yellow;
+  width: 100px;
+  height: 100px;
+}
+
+#mercury .planet{
+  width: 5px;
+  height: 5px;
+  background-color: green;
+}
+#venus{
+  height: 200px;
+  width: 200px;
+}
+#venus .planet{
+  width: 7px;
+  height: 7px;
+  background-color: purple;
+}
+#earth{
+  height: 250px;
+  width: 250px;
+}
+#earth .planet{
+  width: 15px;
+  height: 15px;
+}
+#mars{
+  height: 300px;
+  width: 300px;
+}
+#mars .planet{
+  width: 12px;
+  height: 12px;
+  background-color: red;
+}
+#jupiter{
+  height: 380px;
+  width: 380px;
+}
+#jupiter .planet{
+  width: 35px;
+  height: 35px;
+}
+#saturn{
+  height: 480px;
+  width: 480px;
+}
+#saturn .planet{
+  width: 50px;
+  height: 50px;
+  background-color: antiquewhite;
+}
+#uranus{
+  height: 580px;
+  width: 580px;
+}
+#uranus .planet{
+  width: 28px;
+  height: 28px;
+  background-color: teal;
+}
+#neptun{
+  height: 680px;
+  width: 680px;
+}
+#neptun .planet{
+  width: 25px;
+  height: 25px;
+}
