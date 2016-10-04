@@ -11,17 +11,16 @@ h1{
   font-size: 1rem;
 }
 
-.planet, .orbit, .star{
-  position: absolute;
-  border-radius: 50%;
-}
-
-.orbit, .star{
+.center{
   top:50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  position: absolute;
 }
 
+.planet, .orbit, .star{
+  border-radius: 50%;
+}
 
 .planet{
   top:0;
@@ -30,19 +29,31 @@ h1{
   width: 10px;
   height: 10px;
   background-color: blue;
+  position: absolute;
 }
 
 .orbit{
   border:1px solid #444;
-  height: 150px;
-  width: 150px;
+  height: 100%;
+  width: 100%;
+  animation: 4s spin linear infinite;
 }
+
 
 #sun{
   background-image: radial-gradient(orange 20%, yellow);
   box-shadow: 0 0 25px yellow;
   width: 100px;
   height: 100px;
+  animation: 500ms linear infinite alternate twinkle;
+}
+#mercury{
+  height: 150px;
+  width: 150px;
+}
+
+#mercury .orbit{
+  animation-duration: 1s;
 }
 
 #mercury .planet{
@@ -54,6 +65,10 @@ h1{
   height: 200px;
   width: 200px;
 }
+
+#venus .orbit{
+  animation-duration: 2s;
+}
 #venus .planet{
   width: 7px;
   height: 7px;
@@ -63,13 +78,21 @@ h1{
   height: 250px;
   width: 250px;
 }
+
 #earth .planet{
   width: 15px;
   height: 15px;
+  background-image: radial-gradient(lightblue 15%, blue 50%);
 }
 #mars{
   height: 300px;
   width: 300px;
+}
+#mars .orbit{
+  animation-duration: 3200ms;
+}
+#mars .orbit{
+  transform: rotate(20deg);
 }
 #mars .planet{
   width: 12px;
@@ -80,6 +103,9 @@ h1{
   height: 380px;
   width: 380px;
 }
+#jupiter .orbit{
+  animation-duration: 4500ms;
+}
 #jupiter .planet{
   width: 35px;
   height: 35px;
@@ -87,6 +113,9 @@ h1{
 #saturn{
   height: 480px;
   width: 480px;
+}
+#saturn .orbit{
+  animation-duration: 6s;
 }
 #saturn .planet{
   width: 50px;
@@ -97,6 +126,9 @@ h1{
   height: 580px;
   width: 580px;
 }
+#uranus .orbit{
+  animation-duration: 12s;
+}
 #uranus .planet{
   width: 28px;
   height: 28px;
@@ -106,7 +138,30 @@ h1{
   height: 680px;
   width: 680px;
 }
+#neptun .orbit{
+  animation-duration: 20s;
+}
 #neptun .planet{
   width: 25px;
   height: 25px;
+}
+
+
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes twinkle{
+  from {
+    box-shadow: 0 0 15px yellow;
+  }
+
+  to{
+    box-shadow: 0 0 35px orange;
+  }
 }
